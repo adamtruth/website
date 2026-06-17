@@ -1,1 +1,0 @@
-# Adam Amin / adamtruth website
