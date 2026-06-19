@@ -4,6 +4,7 @@ import Projects from './pages/Projects.jsx'
 import Writing from './pages/Writing.jsx'
 import Misc from './pages/Misc.jsx'
 import GPG from './pages/misc/GPG.jsx'
+import Resume from './pages/misc/Resume.jsx'
 
 import './style/App.css'
 import profile from './assets/profile.png'
@@ -91,6 +92,7 @@ function App() {
         <Route path="/writing" element={<Writing />} />
         <Route path="/misc" element={<Misc />} />
         <Route path="/misc/gpg" element={<GPG />} />
+        <Route path="/misc/resume" element={<Resume />} />
       </Routes>
 
       <footer id="footer">
