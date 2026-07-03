@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Routes, Route, NavLink } from 'react-router-dom'
 
 import Projects from './pages/Projects.jsx'
@@ -40,6 +41,29 @@ function About() {
     </div>
   )
 }
+function Location({city, state, country}) {
+    return <h3>{city}, {state}, {country}</h3>
+
+}
+
+function LocalTime() {
+    const [time, setTime] = useState(new Date());
+
+    useEffect(() => {
+        const interval = setInterval(() => setTime(new Date()), 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const formatted = time.toLocaleTimeString('en-US', {
+        timeZone: 'America/Los_Angeles',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+    });
+
+    return <h3 id="local-time">{formatted} PST</h3>;
+}
 
 function Hyperlink({link, text}) {
     return (
@@ -73,6 +97,8 @@ function App() {
           <img id="profile" src={profile} alt="Adam Amin" />
           <h1>Adam Amin</h1>
           <h2>@adamtruth</h2>
+          <Location city="Irvine" state="CA" country="USA"/>
+          <LocalTime />
         </div>
 
         <nav id="sidebar">
