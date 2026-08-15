@@ -23,20 +23,18 @@ function About() {
       <p>
         Previously, I worked as a Software Developer at
         <Hyperlink link="https://planetinnovation.com" text="Planet Innovation" />
-        in Melbourne, Australia.
+        in Melbourne, Australia. Lovely country and people, will definitely be back ;)
       </p>
       <p>
         Currently searching for my next job experience. My goals are to continue to learn and grow
-        as an Embedded Software Engineer, but I am also curious by nature and am open to whatever
+        as an Embedded Software Engineer, but I am also curious by nature and am open to new
         challenges that come my way.
       </p>
       <p>
-        Some hobbies of mine outside of engineering include: gaming, jazz music, and studying japanese.
-        I hope to soon be starting to create a game in a shiny/new low-level language like Zig.
-        Hopefully that will be on the Projects page soon so keep a look out for it!
+        Some hobbies of mine outside of engineering include: gaming, Jazz guitar, and studying Japanese.
       </p>
       <p>
-        If you need to reach me, feel free to email me at the bottom of the page.
+        Thanks for reading! If you need to reach me, feel free to email me via the mail button at the bottom of the page.
       </p>
     </div>
   )
