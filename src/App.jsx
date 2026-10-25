@@ -17,18 +17,20 @@ function About() {
       <h2>About</h2>
       <p>
         My name is Adam Amin. I am a Software Developer with a degree in
-        Computer Engineering. If you are curious why "truth" in my pseudoname:
-        my last name "Amin" in Arabic means honest or trustworthy. Truth is close enough.
+        Computer Engineering from the University of California, Riverside.
+      </p>
+      <p>
+        Currently, I am working at
+        <Hyperlink link="https://quantumemotion.com" text="Quantum eMotion"/>,
+        a cybersecurity company focused on protection against quantum computing attacks.
+        Our work involves usage of pre/post-quantum cryptography, hardened
+        containers, and a VPN Gateway for secure communications.
       </p>
       <p>
         Previously, I worked as a Software Developer at
         <Hyperlink link="https://planetinnovation.com" text="Planet Innovation" />
-        in Melbourne, Australia. Lovely country and people, will definitely be back ;)
-      </p>
-      <p>
-        Currently searching for my next job experience. My goals are to continue to learn and grow
-        as an Embedded Software Engineer, but I am also curious by nature and am open to new
-        challenges that come my way.
+        in Melbourne, Australia. Here I learned the fundamentals of ideal Agile software
+        development practices.
       </p>
       <p>
         Some hobbies of mine outside of engineering include: gaming, Jazz guitar, and studying Japanese.
@@ -39,11 +41,14 @@ function About() {
     </div>
   )
 }
+
+/* Helper functions */
+
+// Location component displays the city, state, and country
 function Location({city, state, country}) {
     return <h3>{city}, {state}, {country}</h3>
-
 }
-
+// LocalTime component displays the current time in the user's local timezone
 function LocalTime() {
     const [time, setTime] = useState(new Date());
 
@@ -63,13 +68,14 @@ function LocalTime() {
     return <h3 id="local-time">{formatted} PST</h3>;
 }
 
+// For external links/hyperlinks
 function Hyperlink({link, text}) {
     return (
         <a href={link} className="hyperlink"
         target="_blank" rel="noreferrer">{text}</a>
     );
 }
-
+// Copyright component in the footer
 function Copyright() {
   const year = new Date().getFullYear();
   return <p>© {year} Adam Amin.</p>;

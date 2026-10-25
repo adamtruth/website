@@ -8,4 +8,4 @@ help: ## Show this help message
 
 .PHONY: run
 run: ## Run npm with auto-reload
-	@npm run dev
+	@npm install && npm run dev
